@@ -1,1 +1,1 @@
-# MMTN-stkaing-solana
+# mmtn-staking
