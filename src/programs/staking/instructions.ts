@@ -36,10 +36,10 @@ export async function initialize(admin: web3.Signer) {
 //   return accounts.stakePool;
 // }
 
-export async function setStakePoolRewards(stakePool: web3.PublicKey, admin: web3.Signer, rewardsPerSecond: anchor.BN) {
+export async function setStakePoolRewards(stakePool: web3.PublicKey, admin: web3.Signer, rewardsPerSecond: anchor.BN, fee: anchor.BN, lockTime: anchor.BN, penaltyFee: anchor.BN) {
   let accounts = await getSetStakePoolRewardsAccounts(admin.publicKey, stakePool);
   const tx = await program.methods
-    .setStakePoolRewards(rewardsPerSecond)
+    .setStakePoolRewards(rewardsPerSecond, fee, lockTime, penaltyFee)
     .accounts(accounts)
     .signers([admin])
     .rpc();

@@ -234,7 +234,7 @@ export type Staking = {
         "args": []
     }],
     "accounts": [{
-        "name": "GlobalData",
+        "name": "globalData",
         "type": {
             "kind": "struct",
             "fields": [{
@@ -572,7 +572,7 @@ export const IDL: Staking = {
         "args": []
     }],
     "accounts": [{
-        "name": "GlobalData",
+        "name": "globalData",
         "type": {
             "kind": "struct",
             "fields": [{
